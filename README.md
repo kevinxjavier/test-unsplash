@@ -19,13 +19,33 @@
 	$ mvn clean compile package
 ```
 
-### [Run]
+### [Run] Locally
 ```
 	$ mvn spring-boot:run
 	
 	Or
 	
 	$ java -jar target/test-unsplash-0.0.1-SNAPSHOT.jar
+```
+
+# Project Docker
+
+### [Create] Docker
+```
+	$ cd test-unsplash
+	$ docker build -t test-unsplash .
+	$ docker run -dp 8080:8080 test-unsplash
+```
+
+### [Push] Docker
+```
+	$ docker tag test-unsplash kevinpina/test-unsplash
+	$ docker push kevinpina/test-unsplash
+```
+
+### Run] Docker
+```
+	$ docker run -dp 8080:8080 kevinpina/test-unsplash
 ```
 
 ### [Test] endpoints
